@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  width: 70%;
+  width: 100%;
   min-width: 800px;
   margin: 0 auto;
 }
@@ -44,8 +44,8 @@ h3 {
 }
 
 p, li {
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 3rem;
+  line-height: 2;
 }
 
 /* || header layout */
@@ -57,13 +57,13 @@ header {
 }
 
 body > * {
-  background-color: red;
-  padding: 1%;
+  background-color: blue;
+  padding: 5%;
 }
 
 main, header, nav, article, aside, footer, section {
   background-color: rgba(0,255,0,0.5);
-  padding: 1%;
+
 }
 
 h1 {
@@ -135,4 +135,12 @@ aside img {
 
 footer {
   margin-top: 10px;
+}
+
+.header-dove {
+  height: 50px;
+  position:absolute;
+  right: 15px;
+  top: 6px;
+ 
 }
