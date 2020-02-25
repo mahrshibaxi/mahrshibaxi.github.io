@@ -1,0 +1,11 @@
+div, header{
+    display:flex;
+    justify-content: center;
+#logo {
+    width:200px;
+    height:130px;
+}
+
+#wrapper{
+    
+}
