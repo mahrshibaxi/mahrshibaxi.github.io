@@ -3,22 +3,22 @@
     justify-content: center;
     justify-content: space-around;
     background-color: blue;
-
+    flex-wrap: 20px;
 }
 
 .vertical-space{
     padding-bottom: 1px;
 }
 .container{
-    display:flex;
+    display:flex;j
     justify-content: space-around;
-    
 }
 
 .image{
     display:flex;
     width: 200px;
     height: 300px;
+    
 }
 .two{
     background-color: thistle;
@@ -32,17 +32,21 @@
     position: relative;
     top: 300px;
     right: 180px;
+    flex-wrap: 20px;
 }
 .centerbox{
     display:flex;
     justify-content: center;
     background-color: yellow;
+    flex-wrap: 20px;
 }
 .wrapper{
     display:flex;
     justify-content: right;
     background-color: rgb(122, 26, 45);
     max-width: 960px;
+    flex-wrap: 20px;
+
 }
 
 
