@@ -3,11 +3,11 @@
     justify-content: center;
     justify-content: space-around;
     background-color: blue;
-    flex-wrap: 20px;
+    flex-wrap: wrap;
 }
 
 .vertical-space{
-    padding-bottom: 1px;
+    padding-bottom: 15px;
 }
 .container{
     display:flex;j
@@ -18,6 +18,10 @@
     display:flex;
     width: 200px;
     height: 300px;
+    border: 1px solid black;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    flex-direction: row;
     
 }
 .two{
@@ -31,21 +35,24 @@
     background-color: thistle;
     position: relative;
     top: 300px;
-    right: 180px;
-    flex-wrap: 20px;
+    right: 200px;
+    flex-wrap: wrap;
+    flex-wrap: row;
 }
 .centerbox{
     display:flex;
     justify-content: center;
-    background-color: yellow;
-    flex-wrap: 20px;
+    background-color: rgb(235, 235, 137);
+    flex-wrap: wrap;
+    flex-direction: row;
+    
 }
 .wrapper{
     display:flex;
-    justify-content: right;
-    background-color: rgb(122, 26, 45);
+    justify-content: center;
+    background-color:rgb(235, 235, 137);
     max-width: 960px;
-    flex-wrap: 20px;
+    flex-wrap: wrap;
 
 }
 
