@@ -7,7 +7,7 @@
 }
 
 .vertical-space{
-    padding-bottom: 15px;
+    padding-bottom: 1px;
 }
 .container{
     display:flex;
@@ -18,12 +18,20 @@
 .image{
     display:flex;
     width: 200px;
-    height: 200px;
+    height: 300px;
+}
+.two{
+    background-color: thistle;
 }
 
 .caption{
     display:flex;
-    justify-content: baseline;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(102, 129, 51);
+    position: relative;
+    top: 300px;
+    right: 180px;
 }
 .centerbox{
     display:flex;
