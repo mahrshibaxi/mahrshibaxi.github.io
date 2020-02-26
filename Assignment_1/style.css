@@ -1,11 +1,29 @@
-div, header{
+.header{
     display:flex;
     justify-content: center;
-#logo {
+    justify-content: space-around;
+    background-color: blue;
+.logo {
     width:200px;
     height:130px;
 }
+.container{
 
-#wrapper{
+}
+.wrapper{
+    display:flex;
+ 
+}
+
+
+.skill{
+
+}
+
+.project{
+
+}
+
+.desc{
     
 }
