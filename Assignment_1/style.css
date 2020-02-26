@@ -3,27 +3,40 @@
     justify-content: center;
     justify-content: space-around;
     background-color: blue;
-.logo {
-    width:200px;
-    height:130px;
+
+}
+
+.vertical-space{
+    padding-bottom: 15px;
 }
 .container{
+    display:flex;
+    justify-content: space-around;
+    
+}
 
+.image{
+    display:flex;
+    width: 200px;
+    height: 200px;
+}
+
+.caption{
+    display:flex;
+    justify-content: baseline;
+}
+.centerbox{
+    display:flex;
+    justify-content: center;
+    background-color: yellow;
 }
 .wrapper{
     display:flex;
- 
+    justify-content: right;
+    background-color: rgb(122, 26, 45);
+    max-width: 960px;
 }
 
 
-.skill{
 
-}
 
-.project{
-
-}
-
-.desc{
-    
-}
