@@ -38,6 +38,7 @@
     background-color: thistle;
     flex-wrap: wrap;
     margin-top: 10px;
+    max-width: 960px;
 }
 
 .caption{
