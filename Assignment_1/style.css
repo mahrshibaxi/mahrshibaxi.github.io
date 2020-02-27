@@ -12,6 +12,7 @@
 .container{
     
     display:flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     text-align: center;
@@ -42,7 +43,7 @@
     top: 300px;
     right: 200px;
     flex-wrap: wrap;
-    flex-wrap: row;
+    flex-direction: row;
 }
 .centerbox{
     display:flex;
