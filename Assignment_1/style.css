@@ -78,6 +78,17 @@
     font-family: 'Dancing Script';
 }
 
+.jobtitle{
+    font-family: 'Open Sans Condensed' ;
+}
+.jobdesc{
+    font-family: 'Open Sans Condensed' ;
+}
+
+.name{
+    color: white
+}
+
 @media screen and (max-width: 1000px){
 
     .container{
@@ -88,5 +99,7 @@
         flex-wrap: wrap;
 }
 }
+
+
 
 
