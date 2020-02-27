@@ -4,10 +4,13 @@
     justify-content: space-around;
     background-color: blue;
     flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding: 10px;
+    margin: 0;
 }
 
 .vertical-space{
-    padding-bottom: 15px;
+    padding-bottom: 1px;
 }
 .container{
     
@@ -15,8 +18,9 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    text-align: center;
-    align-self: center;
+    
+    
+    
 }
 
 .image{
@@ -27,11 +31,13 @@
     border-radius: 4px;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-top: 15px;
     
 }
 .two{
     background-color: thistle;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .caption{
@@ -40,7 +46,7 @@
     height: 50px;
     background-color: thistle;
     position: relative;
-    top: 300px;
+    top: 320px;
     right: 200px;
     flex-wrap: wrap;
     flex-direction: row;
@@ -59,7 +65,8 @@
     background-color:rgb(235, 235, 137);
     max-width: 960px;
     flex-wrap: wrap;
-
+    flex-direction: row;
+    margin-bottom: 15px;
 }
 
 .roles{
