@@ -12,14 +12,10 @@
 .vertical-space{
     padding-bottom: 1px;
 }
+
 .container{
-    flex-grow: 1;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
-    
+    flex: 0 1 auto;
+    margin-right: 15px;
     
     
 }
@@ -43,10 +39,11 @@
     margin-top: 10px;
     max-width: 960px;
     flex-grow: 1;
+    padding: 10px;
 }
 
 .caption{
-    display:flex;
+    display: flex;
     width: 200px;
     height: 50px;
     background-color: thistle;
@@ -54,6 +51,7 @@
     right: 200px;
     flex-wrap: wrap;
     flex-direction: row;
+
 }
 .centerbox{
     display:flex;
@@ -80,6 +78,15 @@
     font-family: 'Dancing Script';
 }
 
+@media screen and (max-width: 1000px){
 
+    .container{
+        flex-grow: 1;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+}
+}
 
 
