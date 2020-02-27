@@ -28,6 +28,7 @@
 }
 .two{
     background-color: thistle;
+    flex-wrap: wrap;
 }
 
 .caption{
