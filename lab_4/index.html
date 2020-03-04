@@ -25,10 +25,25 @@
       </div>
     </div>
     <script>
+      var str = "Mahrshi Bakshi";
+      var n = str.length;
+      var third = str.substr(2,1).toUpperCase();
+      var last3 = str.substr(-3,-3);
+      var first = str.substr(0,7);
+      var last = str.substr(8);
+      var total = first.length + last.length
+
       function clickMe() {
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
+
+        const myTitle = document.querySelector(".header");
+        mytitle.innerHTML = "Mahrshi Bakshi Lab 4 " + total;
+        
+        document.querySelector(".content").innerHTML += "<p class=p1> Third character in my name is " +third+","+"<br>"+last3+"</p>"
+
       }
+      
     </script>
   </body>
 </html>
