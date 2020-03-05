@@ -13,16 +13,16 @@ myImage.onclick = function() {
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
 function myUserName(){
-    let myName= prompt('Please enter your name');
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool' + myName;
+    let Name= prompt('Please enter your name');
+    localStorage.setItem('name', Name);
+    myHeading.textContent = 'Mozilla is cool' + Name;
     
 }
 
 if(!localStorage.getItem('name')){
     setUsername();
 } else{
-    let storedName = localStorage.setItem('name',myName);
-    myHeading.innerHTML = 'Mozilla is cool' + myName;
+    let storedName = localStorage.setItem('name',Name);
+    myHeading.innerHTML = 'Mozilla is cool' + Name;
 
 }
