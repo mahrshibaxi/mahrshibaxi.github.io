@@ -308,7 +308,6 @@ function clickMe() {
     let randomNum = Math.floor(Math.random() * countries.length);
     let code = JSON.stringify(countries[randomNum]["code"]);
     let name = JSON.stringify(countries[randomNum]["name"]); 
-    unselectedcountries.pop(countries[randomNum]);
     chosenCountries.push({ name: name, code: code });
     chosenCountries.sort(compare);
   }
