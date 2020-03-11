@@ -294,13 +294,7 @@ function clickMe() {
     unselectedcountries.push(countries[m]);
   }
   function compare(c, d) {
-    if (c.name < d.name) {
-      return -1;
-    }
-    if (c.name > d.name) {
-      return 1;
-    }
-  
+    return c-d
   }
   let f = 0;
   let chosenCountries = [];
