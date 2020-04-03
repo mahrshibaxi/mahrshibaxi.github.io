@@ -62,9 +62,9 @@
       markM.bindPopup(strM).openPopup();
 
       const obj = {
-         One: { lat: 38.98576, long: -76.72917},
-        Two: { lat: 38.895049, long: -76.822919},
-        Three: {lat: 38.997563, long:-76.910024}
+         Subway: { lat: 38.98576, long: -76.72917},
+        Checkers: { lat: 38.895049, long: -76.822919},
+        Mod: {lat: 38.997563, long:-76.910024}
       }
 
         fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json")
@@ -74,17 +74,17 @@
         })
         .then(data => {
           console.log(data);
-          const markA = L.marker([obj.One.lat, obj.One.long]).addTo(mymap);
+          const markA = L.marker([obj.Subway.lat, obj.Subway.long]).addTo(mymap);
           const strA = data[9].name;
           markA.bindPopup(strA).openPopup();
          
           
-          const markB = L.marker([obj.Two.lat, obj.Two.long]).addTo(mymap);
+          const markB = L.marker([obj.Checkers.lat, obj.Checkers.long]).addTo(mymap);
           const strB = data[5].name;
           markB.bindPopup(strB).openPopup();
           
           
-          const markC = L.marker([obj.Three.lat, obj.Three.long]).addTo(mymap);
+          const markC = L.marker([obj.Mod.lat, obj.Mod.long]).addTo(mymap);
           const strC = data[6].name;
           markC.bindPopup(strC).openPopup();
       
