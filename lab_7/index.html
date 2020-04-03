@@ -61,7 +61,7 @@
       const markM = L.marker([38.985864, -76.944906]).addTo(mymap);
       markM.bindPopup(strM).openPopup();
 
-      const obj = {
+      const point= {
          Subway: { lat: 38.98576, long: -76.72917},
         Checkers: { lat: 38.895049, long: -76.822919},
         Mod: {lat: 38.997563, long:-76.910024}
@@ -74,7 +74,7 @@
         })
         .then(dataset => {
           console.log(dataset);
-          const markA = L.marker([obj.Subway.lat, obj.Subway.long]).addTo(mymap);
+          const markA = L.marker([point.Subway.lat, point.Subway.long]).addTo(mymap);
           const strA = dataset[9].name;
           markA.bindPopup(strA).openPopup();
          
@@ -83,6 +83,13 @@
           const markB = L.marker([point.Checkers.lat, point.Checkers.long]).addTo(mymap);
           const strB = dataset[5].name;
           markB.bindPopup(strB).openPopup();
+           const circle = L.circle([point.Checkers.lat, point.Checkers.long], {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5,
+          radius: 500
+  
+          }).addTo(mymap);
          
           
           
@@ -90,6 +97,13 @@
           const markC = L.marker([point.Mod.lat, point.Mod.long]).addTo(mymap);
           const strC = dataset[6].name;
           markC.bindPopup(strC).openPopup()    
+          const polygon = L.polygon([point.Mod.lat, point.Mod.long], {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5,
+          radius: 500
+  
+          }).addTo(mymap);
          
              
       
