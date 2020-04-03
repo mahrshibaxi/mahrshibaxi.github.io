@@ -72,20 +72,20 @@
           console.log(response);
           return response.json();
         })
-        .then(data => {
-          console.log(data);
+        .then(dataset => {
+          console.log(dataset);
           const markA = L.marker([obj.Subway.lat, obj.Subway.long]).addTo(mymap);
-          const strA = data[9].name;
+          const strA = dataset[9].name;
           markA.bindPopup(strA).openPopup();
          
           
           const markB = L.marker([obj.Checkers.lat, obj.Checkers.long]).addTo(mymap);
-          const strB = data[5].name;
+          const strB = dataset[5].name;
           markB.bindPopup(strB).openPopup();
           
           
           const markC = L.marker([obj.Mod.lat, obj.Mod.long]).addTo(mymap);
-          const strC = data[6].name;
+          const strC = dataset[6].name;
           markC.bindPopup(strC).openPopup();
       
 
