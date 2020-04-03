@@ -87,19 +87,7 @@
           const markC = L.marker([obj.Three.lat, obj.Three.long]).addTo(mymap);
           const strC = data[6].name;
           markC.bindPopup(strC).openPopup();
-          
-           const nameAndCoordinates = [];
-      for (let i = 0; i < randomNumsUnique.length; i++) {
-        let number = randomNumsUnique[i];
-        let name = restaurantdata[number]["name"];
-        let coordinates = []
-          restaurantData[number]["column"]["coordinates"];
-        nameAndCoordinates.push({ name, coordinates });
-      }
-      console.log(
-        " latitude/longitude",
-        nameAndCoordinates
-      );
+      
 
           
 
