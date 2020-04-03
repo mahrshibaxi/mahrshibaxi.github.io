@@ -75,17 +75,17 @@
         .then(data => {
           console.log(data);
           const markA = L.marker([obj.One.lat, obj.One.long]).addTo(mymap);
-          const strA = data[1].name;
+          const strA = data[9].name;
           markA.bindPopup(strA).openPopup();
          
           
           const markB = L.marker([obj.Two.lat, obj.Two.long]).addTo(mymap);
-          const strB = data[3].name;
+          const strB = data[5].name;
           markB.bindPopup(strB).openPopup();
           
           
           const markC = L.marker([obj.Three.lat, obj.Three.long]).addTo(mymap);
-          const strC = data[5].name;
+          const strC = data[6].name;
           markC.bindPopup(strC).openPopup();
           
 
