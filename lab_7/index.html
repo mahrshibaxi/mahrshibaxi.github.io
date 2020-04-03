@@ -83,26 +83,14 @@
           const markB = L.marker([point.Checkers.lat, point.Checkers.long]).addTo(mymap);
           const strB = dataset[5].name;
           markB.bindPopup(strB).openPopup();
-          const circle = L.circle([point.Checkers.lat, point.Checkers.long], {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5,
-          radius: 500
-  
-          }).addTo(mymap);
+         
           
           
           
           const markC = L.marker([point.Mod.lat, point.Mod.long]).addTo(mymap);
           const strC = dataset[6].name;
           markC.bindPopup(strC).openPopup()    
-          const polygon = L.polygon([point.Mod.lat, point.Mod.long], {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.5,
-          radius: 500
-  
-          }).addTo(mymap);
+         
              
       
         });
