@@ -14,12 +14,6 @@
       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
       crossorigin=""
     ></script>
-    <style>
-         #map1 { 
-             width: 640px;
-             height: 480px; 
-            }
-    </style>
   </head>
 
   <body>
@@ -27,76 +21,12 @@
       <div class="wrapper">
         <div class="header">Frontend Libraries: Maps Lab</div>
         <div class="content">
-          <div id="map1"></div>
+          When your lab is done, this should be replaced with a stylish map.
         </div>
         <div class="footer">Make some markers work!</div>
       </div>
     </div>
     <script>
-      /* Your lab code can go here, or in an external file you include */
-    const mymap = L.map('map1').setView([38.985887, -76.941979], 13);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoibWFocnNoaWJheGkiLCJhIjoiY2s4amViZHFmMDNobDNrbTd2NTRrdXdocSJ9.O-sPyw1B2xZSKlbBFcZaDw',
-}
-).addTo(mymap);
-
-    /*const mark1 = L.marker([38.985887, -76.941979]).addTo(mymap);
-    const str1 = "<b>Hello world!</b><br>I am a popup."
-    mark1.bindPopup(str1).openPopup();*/
-
-      const strH = "<b>This is</b><br>Hornbake Library";
-      const markH = L.marker([38.988173, -76.941598]).addTo(mymap);
-      markH.bindPopup(strH).openPopup();
-
-      const strE = "<b>This is</b><br>Eppley Rec Centre";
-      const markE = L.marker([38.993523, -76.94514]).addTo(mymap);
-      markE.bindPopup(strE).openPopup();
-
-      const strM = "<b>This is</b><br>Mckeldin Library";
-      const markM = L.marker([38.985864, -76.944906]).addTo(mymap);
-      markM.bindPopup(strM).openPopup();
-
-      const obj = {
-        One: { lat: 38.923485, long: -76.838472},
-        Two: { lat: 38.68421, long: -76.983111},
-        Three: {lat: 38.98576, long:-76.72917}
-      }
-
-        fetch("http://data.princegeorgescountymd.gov/resource/umjn-t2iz.json")
-        .then(response => {
-          console.log(response);
-          return response.json();
-        })
-        .then(data => {
-          console.log(data);
-          const markA = L.marker([obj.One.lat, obj.One.long]).addTo(mymap);
-          const strA = data[1].name;
-          markA.bindPopup(strA).openPopup();
-         
-          
-          const markB = L.marker([obj.Two.lat, obj.Two.long]).addTo(mymap);
-          const strB = data[3].name;
-          markB.bindPopup(strB).openPopup();
-          
-          
-          const markC = L.marker([obj.Three.lat, obj.Three.long]).addTo(mymap);
-          const strC = data[5].name;
-          markC.bindPopup(strC).openPopup();
-          
-
- 
-          
-      
-        });
-        
-    </script>
-  </body>
-</html>
         /* Your lab code can go here, or in an external file you include */
     </script>
   </body>
