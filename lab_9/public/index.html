@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Replace Me With Your Lab Page</title>
-  <link rel="stylesheet" type="text/css" href="./styles.css">
-</head>
-
-<body>
-  <div class="container">
-    <div class="wrapper">
-      <div class="header">Replace Me With Your Lab Page</div>
-      <div class="content"></div>
-      <div class="footer"></div>
+  <head>
+    <title>Charts Lab</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">Frontend Libraries: Charts Lab</div>
+        <div class="content">
+          When your lab is done, this should be replaced with a useful chart
+          full of food data.
+        </div>
+        <div class="footer">Let's eat out in the future!</div>
+      </div>
     </div>
-  </div>
-  <script>
-    fetch('/api') // Rather than fetching from PG County, we're going to fetch from our own server.
-      .then(res => res.json())
-      .then(res => {
-        return res;
-      })
-      .then((data) => {
+
+    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script>
+      fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json")
+        .then((response) => response.json())
+        .then((data) => {
           const clearEmptyData = data.filter((f) => f.geocoded_column_1);
           const refined = clearEmptyData.map((m) => ({
             category: m.category,
@@ -44,28 +46,18 @@
           console.log("new data", data);
           const reformattedData = Object.entries(data).map((m, i) => {
             console.log(m);
-            return 
-            {
-              y:260
-              label: yes}
-
-              {
-              y:480
-              label: ima}
-  
-              {
-              y:360
-              label: label}
-              
-
-
-            
+            return {
+              y: m[1].length,
+              label: m[0],
+            };
           });
           return reformattedData
         })
-      .then(res => {
-        
 
+        .then((result) => {
+          console.log(result);
+
+          window.onload = function () {
             const chart = new CanvasJS.Chart("chartContainer", {
               animationEnabled: true,
               title: {
@@ -105,10 +97,9 @@
               ],
             });
             chart.render();
-          })
-        
-      
-  </script>
-</body>
-
+          };
+        });
+    </script>
+  </body>
 </html>
+
