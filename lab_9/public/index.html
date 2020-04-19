@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Replace Me With Your Lab Page</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">Replace Me With Your Lab Page</div>
+      <div class="content"></div>
+      <div class="footer"></div>
+    </div>
+  </div>
+  <script>
+    fetch('/api') // Rather than fetching from PG County, we're going to fetch from our own server.
+      .then(res => res.json())
+      .then(res => {
+        return res;
+      })
+      .then((data) => {
+          const clearEmptyData = data.filter((f) => f.geocoded_column_1);
+          const refined = clearEmptyData.map((m) => ({
+            category: m.category,
+            name: m.name,
+            latLong: m.geocoded_column_1.coordinates,
+          }));
+          return refined;
+        })
+
+        .then((data) => {
+          return data.reduce((result, current) => {
+            if (!result[current.category]) {
+              result[current.category] = [];
+            }
+            result[current.category].push(current);
+            return result;
+          });
+        })
+
+        .then((data) => {
+          console.log("new data", data);
+          const reformattedData = Object.entries(data).map((m, i) => {
+            console.log(m);
+            return 
+            {
+              y:260
+              label: yes}
+
+              {
+              y:480
+              label: ima}
+  
+              {
+              y:360
+              label: label}
+              
+
+
+            
+          });
+          return reformattedData
+        })
+      .then(res => {
+        
+
+            const chart = new CanvasJS.Chart("chartContainer", {
+              animationEnabled: true,
+              title: {
+              text: "Let's Find Somewhere to Eat"
+            },
+            axisX:{
+              labelFontSize:8,
+              margin:10,
+              interval:1,
+            },
+            axisY:{
+              scaleBreaks:{
+                customBreaks: [
+                {
+                  startvalue:20,
+                  endvalue:35,
+              },
+          
+              {
+                startValue:60,
+                endValue:120,
+
+              },
+              {
+                startValue:160,
+                endValue:220,
+              }
+            ],
+          },
+        
+        },
+              data: [
+                {
+                  type: "pie",
+                  dataPoints: result
+                },
+              ],
+            });
+            chart.render();
+          })
+        
+      
+  </script>
+</body>
+
+</html>
