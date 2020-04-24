@@ -13,6 +13,7 @@
         <div>
           <form class="targetForm" id="labForm">
             <label for="name">Name</label>
+             <label for="zipcode">Zipcode</label>
             <input type="text" id="name" name="name" />
             <label for="interests">Interests</label>
             <textarea id="interests" name="interests" rows="5" cols="33">
@@ -33,7 +34,7 @@
         const formToSend = new FormData(target);
 
         fetch("/api", {
-          method: "POST",
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
