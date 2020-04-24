@@ -19,7 +19,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-
+async function writeUser(username,setting) {
+  const db = await open(setting)
+  await db.exec("CREATE TABLE IF NOT EXISTS user (name)");
+  await db.exec('INSERT INTO user VALUES("${username}")');
+  const result = await db.each("SELECT * FROM user");
+  console.log("Expected result", result);
+  return result;
+}
 
 function processDataForFrontEnd(req, res) {
   const baseURL = ''; // Enter the URL for the data you would like to retrieve here
