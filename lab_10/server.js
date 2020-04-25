@@ -54,6 +54,16 @@ app.route('/api')
   .put((req, res) => {
     console.log("/api put request", req.body);
     res.send('congratulation! you successfully requested'); // simple mode
+    if(!req.body.name){
+      console.log(req.body);
+      res.status('418').send('something went wrong, additionally i am a teapot')
+    } else {
+      writeUser(req.body.name, dbSettings)
+      .then((result) => {
+        console.log(result);
+        res.send('your request was successful'); // simple mode
+      })
+    }
   })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
