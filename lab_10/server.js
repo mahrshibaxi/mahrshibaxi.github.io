@@ -61,7 +61,7 @@ app.route('/api')
       writeUser(req.body.name, dbSettings)
       .then((result) => {
         console.log(result);
-        res.send('your request was successful'); // simple mode
+        res.send('congratulation! you successfully requested'); // simple mode
       })
     }
   })
