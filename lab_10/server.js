@@ -51,19 +51,24 @@ function processDataForFrontEnd(req, res) {
 // 
 app.route('/api')
   .get((req, res) => {processDataForFrontEnd(req, res)})
+
   .put((req, res) => {
     console.log("/api put request", req.body);
-    res.send('congratulation! you successfully requested'); // simple mode
-    if(!req.body.name){
+    //res.send('congratulation! you successfully requested'); // simple mode
+    if(!req.body.name)
+    {
       console.log(req.body);
       res.status('418').send('something went wrong, additionally i am a teapot')
-    } else {
-      writeUser(req.body.name, dbSettings)
-      .then((result) => {
-        console.log(result);
-        res.send('congratulation! you successfully requested'); // simple mode
-      })
+    } else 
+    {
+      console.log(req.body);
+      res.send('congratulation! you successfully requested');
+      //writeUser(req.body.name).then((result) => {
+                                    //console.log(result);
+                                    //res.send('congratulation! you successfully requested'); // simple mode
+                                            //}).catch((err) => {console.log(err);})
     }
   })
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
