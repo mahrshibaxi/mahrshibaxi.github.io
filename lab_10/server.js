@@ -51,8 +51,8 @@ function processDataForFrontEnd(req, res) {
 // 
 app.route('/api')
   .get((req, res) => {processDataForFrontEnd(req, res)})
-  .post((req, res) => {
-    console.log("/api post request", req.body);
+  .put((req, res) => {
+    console.log("/api put request", req.body);
     res.send('your request was successful'); // simple mode
   })
 
