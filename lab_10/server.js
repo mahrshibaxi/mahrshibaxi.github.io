@@ -58,7 +58,7 @@ app.route('/api')
     if(!req.body.name)
     {
       console.log(req.body);
-      res.status('418').send('something went wrong, additionally i am a teapot')
+      res.status('418').send('something went wrong, your response is empty')
     } else 
     {
       console.log(req.body);
