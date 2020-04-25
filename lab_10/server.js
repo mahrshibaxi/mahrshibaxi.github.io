@@ -28,6 +28,7 @@ async function writeUser(username,setting) {
   res.json(result);
 }
 
+
 function processDataForFrontEnd(req, res) {
   const baseURL = ''; // Enter the URL for the data you would like to retrieve here
 
@@ -63,10 +64,11 @@ app.route('/api')
     {
       console.log(req.body);
       res.send('congratulation! you successfully requested');
-      //writeUser(req.body.name).then((result) => {
-                                    //console.log(result);
-                                    //res.send('congratulation! you successfully requested'); // simple mode
-                                            //}).catch((err) => {console.log(err);})
+      writeUser(req.body.name).then((result) => {
+      console.log(result);
+      });
+      //res.send('congratulation! you successfully requested'); // simple mode
+      //}).catch((err) => {console.log(err);})
     }
   })
 
