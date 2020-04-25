@@ -25,7 +25,7 @@ async function writeUser(username,setting) {
   await db.exec('INSERT INTO user VALUES("${username}")');
   const result = await db.each("SELECT * FROM user");
   console.log("Expected result", result);
-  return result;
+  res.json(result);
 }
 
 function processDataForFrontEnd(req, res) {
