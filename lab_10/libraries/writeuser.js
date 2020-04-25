@@ -10,7 +10,7 @@ async function writeUser(username, dbSettings) {
       console.log('writeuser', err);
     });
     console.log('Expected result', result);
-    return result;
+    res.json(result);
   }
   
   export default writeUser;
