@@ -28,6 +28,14 @@ async function writeUser(username,setting) {
   res.json(result);
 }
 
+async function databasebaseBoot() {
+  console.log('async DB boot')
+  const db = await open ({
+    filename: '/tmp/database.db',
+    driver: sqlite3.database
+  })
+}
+
 
 function processDataForFrontEnd(req, res) {
   const baseURL = ''; // Enter the URL for the data you would like to retrieve here
