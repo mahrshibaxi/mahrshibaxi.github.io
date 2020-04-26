@@ -36,6 +36,15 @@ async function databasebaseBoot() {
   })
 }
 
+async function writeUser(username) {
+  console.log('touched username ${username}')
+  const db = await open ({
+    filename: '/tmp/database.db',
+    driver: sqlite3.database
+  })
+  await db.exec('CREATE TABLE IF NOT EXISTS user (name)');
+}
+
 
 function processDataForFrontEnd(req, res) {
   const baseURL = ''; // Enter the URL for the data you would like to retrieve here
