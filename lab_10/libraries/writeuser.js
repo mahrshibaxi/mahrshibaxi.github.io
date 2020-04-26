@@ -14,3 +14,13 @@ async function writeUser(username, dbSettings) {
   }
   
   export default writeUser;
+
+ async function writeUser(username) {
+    console.log('touched username ${username}')
+    const db = await open ({
+      filename: '/tmp/database.db',
+      driver: sqlite3.database
+    })
+    await db.exec('CREATE TABLE IF NOT EXISTS user (name)');
+
+  }
